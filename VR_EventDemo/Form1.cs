@@ -17,12 +17,27 @@ namespace VR_EventDemo
             InitializeComponent();
         }
 
+        private Marine m1 = new Marine();
+        private Marine m2 = new Marine();
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+//            m1.HPChanged += new EventHandler<HPChangedEventArgs>(Marine_HPChanged);
+            m1.HPChanged += Marine_HPChanged;
+        }
+
+        private void Marine_HPChanged(object sender, HPChangedEventArgs e)
+        {
+        }
+
         private void btnAttackMarine2_Click(object sender, EventArgs e)
         {
             // damage = 나의공격력 - 상대의방어력 * 10
 
-            decimal damage = (nudWeapon1.Value - nudArmor2.Value) * 10;
-            prbHP2.Value -= (int)damage;
+            m1.Attack(m2);
+
+            prbHP2.Value = m2.HP;
+            prbHP1.Value = m1.HP;
         }
 
         private void btnAttackMarine1_Click(object sender, EventArgs e)

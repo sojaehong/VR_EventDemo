@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nudArmor1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nudWeapon1 = new System.Windows.Forms.NumericUpDown();
             this.prbHP1 = new System.Windows.Forms.ProgressBar();
             this.btnAttackMarine2 = new System.Windows.Forms.Button();
             this.btnAttackMarine1 = new System.Windows.Forms.Button();
-            this.nudWeapon1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nudArmor1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.nudArmor2 = new System.Windows.Forms.NumericUpDown();
@@ -43,8 +43,8 @@
             this.nudWeapon2 = new System.Windows.Forms.NumericUpDown();
             this.prbHP2 = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWeapon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudArmor1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeapon1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudArmor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeapon2)).BeginInit();
@@ -63,6 +63,50 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Marine 1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(17, 12);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "방";
+            // 
+            // nudArmor1
+            // 
+            this.nudArmor1.Location = new System.Drawing.Point(32, 74);
+            this.nudArmor1.Name = "nudArmor1";
+            this.nudArmor1.Size = new System.Drawing.Size(79, 21);
+            this.nudArmor1.TabIndex = 3;
+            this.nudArmor1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudArmor1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 12);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "공";
+            // 
+            // nudWeapon1
+            // 
+            this.nudWeapon1.Location = new System.Drawing.Point(32, 47);
+            this.nudWeapon1.Name = "nudWeapon1";
+            this.nudWeapon1.Size = new System.Drawing.Size(79, 21);
+            this.nudWeapon1.TabIndex = 1;
+            this.nudWeapon1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudWeapon1.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             // 
             // prbHP1
             // 
@@ -91,50 +135,6 @@
             this.btnAttackMarine1.Text = "<--";
             this.btnAttackMarine1.UseVisualStyleBackColor = true;
             this.btnAttackMarine1.Click += new System.EventHandler(this.btnAttackMarine1_Click);
-            // 
-            // nudWeapon1
-            // 
-            this.nudWeapon1.Location = new System.Drawing.Point(32, 47);
-            this.nudWeapon1.Name = "nudWeapon1";
-            this.nudWeapon1.Size = new System.Drawing.Size(79, 21);
-            this.nudWeapon1.TabIndex = 1;
-            this.nudWeapon1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudWeapon1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 12);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "공";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 12);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "방";
-            // 
-            // nudArmor1
-            // 
-            this.nudArmor1.Location = new System.Drawing.Point(32, 74);
-            this.nudArmor1.Name = "nudArmor1";
-            this.nudArmor1.Size = new System.Drawing.Size(79, 21);
-            this.nudArmor1.TabIndex = 3;
-            this.nudArmor1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudArmor1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // groupBox2
             // 
@@ -189,7 +189,7 @@
             this.nudWeapon2.TabIndex = 1;
             this.nudWeapon2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudWeapon2.Value = new decimal(new int[] {
-            1,
+            3,
             0,
             0,
             0});
@@ -213,10 +213,11 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWeapon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudArmor1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeapon1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudArmor2)).EndInit();

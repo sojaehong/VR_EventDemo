@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR_EventDemo", "VR_EventDemo\VR_EventDemo.csproj", "{294D18DE-4CC1-4786-B321-C62BD6694F23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR_EventDemoTests", "VR_EventDemoTests\VR_EventDemoTests.csproj", "{5B781FDE-EBF9-4AAF-94A3-C6BE3B93245D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{294D18DE-4CC1-4786-B321-C62BD6694F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{294D18DE-4CC1-4786-B321-C62BD6694F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{294D18DE-4CC1-4786-B321-C62BD6694F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B781FDE-EBF9-4AAF-94A3-C6BE3B93245D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B781FDE-EBF9-4AAF-94A3-C6BE3B93245D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B781FDE-EBF9-4AAF-94A3-C6BE3B93245D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B781FDE-EBF9-4AAF-94A3-C6BE3B93245D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
