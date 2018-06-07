@@ -42,6 +42,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.nudWeapon2 = new System.Windows.Forms.NumericUpDown();
             this.prbHP2 = new System.Windows.Forms.ProgressBar();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudArmor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeapon1)).BeginInit();
@@ -202,11 +204,28 @@
             this.prbHP2.TabIndex = 0;
             this.prbHP2.Value = 100;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(23, 122);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(23, 149);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 21);
+            this.textBox2.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 174);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnAttackMarine1);
             this.Controls.Add(this.btnAttackMarine2);
@@ -223,6 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudArmor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeapon2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -242,6 +262,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown nudWeapon2;
         private System.Windows.Forms.ProgressBar prbHP2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
